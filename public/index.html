@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/output.css">
+    <title>tab-menu</title>
+</head>
+
+<body class="bg-blue-400 flex   justify-center items-center h-screen">
+    <div x-data="{tabNo : 1}" class="w-full flex flex-col items-center">
+        <div class="bg-blue-600 max-w-md w-full rounded-xl p-1 flex gap-x-2 items-center justify-between">
+            <button @click="tabNo =1" class=" flex items-center justify-center flex-1 p-2 rounded-xl text-white font-bold hover:bg-blue-400 focus:ring-2 focus:ring-blue-300 focus:bg-white focus:text-blue-700">Recent</button>
+            <button @click="tabNo =2" class=" flex items-center justify-center flex-1 p-2 rounded-xl text-white font-bold hover:bg-blue-400 focus:ring-2 focus:ring-blue-300 focus:bg-white focus:text-blue-700">Popular</button>
+            <button @click="tabNo =3" class=" flex items-center justify-center flex-1 p-2 rounded-xl text-white font-bold hover:bg-blue-400 focus:ring-2 focus:ring-blue-300 focus:bg-white focus:text-blue-700">Trending</button>
+        </div>
+        <div class="bg-white rounded-xl p-2 mt-2 max-w-md w-full ">
+            <!-- page1 -->
+            <div x-show="tabNo===1">
+                <div class="p-1 rounded-xl pl-2 hover:bg-gray-200  cursor-pointer">
+                    <div class="font-bold mb-3">Does drinking coffee make you smarter?</div>
+                    <div class="text-gray-500  mb-4 text-sm">5h,5comments,2shares</div>
+                </div>
+                <div class="p-1 rounded-xl pl-2 hover:bg-gray-200  cursor-pointer">
+                    <div class="font-bold mb-3">So you have bught cofee... now what?</div>
+                    <div class="text-gray-500  mb-4 text-sm">2h ago , 3comments,2share</div>
+                </div>
+            </div>
+            <!-- page2 -->
+            <div x-show="tabNo===2">
+                <div class="p-1 rounded-xl pl-2 hover:bg-gray-200 cursor-pointer ">
+                    <div class="font-bold mb-3 ">is tech making cofee better or worse?</div>
+                    <div class="text-gray-500 mb-4 text-sm ">5h,5comments,2shares</div>
+                </div>
+                <div class="p-1 rounded-xl pl-2 hover:bg-gray-200 cursor-pointer ">
+                    <div class="font-bold mb-3 ">THe most innovative things happening in cofee</div>
+                    <div class="text-gray-500 mb-4 text-sm ">2h ago , 3comments,2share</div>
+                </div>
+
+            </div>
+            <!-- page3 -->
+            <div x-show="tabNo===3 ">
+                <div class="p-1 rounded-xl pl-2 hover:bg-gray-200 cursor-pointer ">
+                    <div class="font-bold mb-3 ">Ask Me Anything 10 answer to your quastion about coffee </div>
+                    <div class="text-gray-500 mb-4 text-sm ">5h,5comments,2shares</div>
+                </div>
+                <div class="p-1 rounded-xl pl-2 hover:bg-gray-200 cursor-pointer ">
+                    <div class="font-bold mb-3 ">THe worst advice we have ever heard about coffee?</div>
+                    <div class="text-gray-500 mb-4 text-sm ">2h ago , 3comments,2share</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="//unpkg.com/alpinejs " defer></script>
+</body>
+
+</html>
